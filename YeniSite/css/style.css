@@ -1,0 +1,320 @@
+/*
+Bu stil dosyasi 27.01.2020 tarihinde OyuncuBilgisi ekibi tarafindan hazirlanmistir.
+
+OyuncuBilgisi.com bir 'Megalow Teknoloji' markasidir!
+
+*/
+
+@font-face {
+    font-family: "Herball";
+    src: url("../fonts/Harbell.ttf");
+}
+
+@font-face {
+    font-family: "WaltDisney";
+    src: url("../fonts/WaltDisney.ttf");
+}
+
+@font-face {
+    font-family: "Anydore";
+    src: url("../fonts/Anydore.otf");
+}
+
+@font-face {
+    font-family: "TTNR";
+    src: url("../fonts/TTNR.ttf");
+}
+
+@-webkit-keyframes background {
+    0% {
+        background: url("../images/bc1.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    15% {
+        background: url("../images/bc2.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    25% {
+        background: url("../images/bc3.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    35% {
+        background: url("../images/bc4.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    45% {
+        background: url("../images/bc5.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    60% {
+        background: url("../images/bc4.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    75% {
+        background: url("../images/bc3.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    85% {
+        background: url("../images/bc2.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    100% {
+        background: url("../images/bc1.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+
+@keyframes background {
+    0% {
+        background: url("../images/bc1.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    15% {
+        background: url("../images/bc2.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    25% {
+        background: url("../images/bc3.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    35% {
+        background: url("../images/bc4.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    45% {
+        background: url("../images/bc5.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    60% {
+        background: url("../images/bc4.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    75% {
+        background: url("../images/bc3.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    85% {
+        background: url("../images/bc2.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    100% {
+        background: url("../images/bc1.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+
+body {
+    -webkit-animation: background 100s cubic-bezier(1, 0, 0, 1) infinite;
+    animation: background 100s cubic-bezier(1, 0, 0, 1) infinite;
+    font-family: TTNR;
+}
+
+#logo {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#logo img {
+    width: 55%;
+}
+
+#content {
+    padding: 10px;
+    width: 65%;
+    margin: auto;
+    text-align: center;
+    display: block;
+    min-height: 600px;
+    background-color: #12264b;
+}
+
+#content .new {
+    margin: auto;
+    width: 24%;
+    height: 300px;
+    color: #2d539c;
+    background-size: cover;
+    opacity: 0.7;
+    display: inline-table;
+}
+
+#content .new:hover {
+    opacity: 1;
+}
+
+#content .new .title {
+    display: block;
+    font-family: Herball;
+    font-size: 30px;
+    height: auto;
+    color: indigo;
+    min-height: 30px;
+    width: 100%;
+}
+
+#content .new .content {
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Anydore;
+    font-size: 20px;
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#content .new .footer {
+    display: block;
+    opacity: 0.0001;
+    bottom: 0;
+    height: auto;
+    min-height: 10px;
+    width: 100%;
+}
+
+#content .new .footer:hover {
+    opacity: 1;
+}
+
+#content .new .footer .right {
+    float: right;
+    text-align: right;
+    width: 50%;
+    color: indigo;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: WaltDisney;
+}
+
+#content .new .footer .left {
+    float: left;
+    text-align: left;
+    width: 50%;
+    color: indigo;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: WaltDisney;
+}
+
+.navbar {
+    margin: auto;
+    text-align: center;
+    width: 70%;
+    position: sticky;
+    height: auto;
+    background-color: #12264b;
+    font-family: Anydore;
+    border-radius: 15px;
+}
+
+.navbar a {
+    width: 14%;
+    text-align: center;
+    margin: auto;
+    padding: 1%;
+    font-size: 25px;
+    text-decoration: none;
+    color: whitesmoke;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    color: #2d539c;
+}
+
+#footerbar {
+    background-color: #12264b;
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    padding: 10px;
+    font-family: Anydore;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: whitesmoke;
+}
+
+#footerbar .left {
+    text-align: left;
+    float: left;
+}
+
+#footerbar .right {
+    text-align: right;
+    float: right;
+}
+
+#footerbar .left a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#footerbar .right a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#footerbar .right a:hover {
+    color: #2d539c;
+}
+
+#footerbar .left a:hover {
+    color: #2d539c;
+}
