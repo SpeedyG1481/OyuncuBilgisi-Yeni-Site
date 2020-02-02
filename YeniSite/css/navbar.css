@@ -1,0 +1,25 @@
+.navbar {
+    margin: auto;
+    text-align: center;
+    width: 88%;
+    position: sticky;
+    height: auto;
+    background-color: #12264b;
+    font-family: Anydore;
+    border-radius: 15px;
+}
+
+.navbar a {
+    width: 14%;
+    text-align: center;
+    margin: auto;
+    padding: 1%;
+    font-size: 25px;
+    text-decoration: none;
+    color: whitesmoke;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    color: #2d539c;
+}

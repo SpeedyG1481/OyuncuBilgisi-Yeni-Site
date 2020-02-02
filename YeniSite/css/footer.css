@@ -1,0 +1,42 @@
+#footerbar {
+    background-color: #12264b;
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    padding: 10px;
+    font-family: Anydore;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: whitesmoke;
+}
+
+#footerbar .left {
+    text-align: left;
+    float: left;
+}
+
+#footerbar .right {
+    text-align: right;
+    float: right;
+}
+
+#footerbar .left a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#footerbar .right a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#footerbar .right a:hover {
+    color: #2d539c;
+}
+
+#footerbar .left a:hover {
+    color: #2d539c;
+}

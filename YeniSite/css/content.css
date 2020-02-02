@@ -1,0 +1,155 @@
+#content {
+    padding: 10px;
+    width: 75%;
+    color: white;
+    margin: auto;
+    font-family: Anydore;
+    text-align: center;
+    display: block;
+    min-height: 600px;
+    background-color: #12264b;
+}
+
+#content .registerLeft {
+    width: 47%;
+    color: white;
+    float: left;
+    min-height: 250px;
+    background-color: #12264ba6;
+}
+
+#content .registerRight {
+    width: 47%;
+    float: right;
+    color: white;
+    min-height: 250px;
+    background-color: #12264ba6;
+}
+
+#content .bottom {
+    margin: auto;
+    width: 100%;
+    opacity: 1;
+    height: auto;
+    min-height: 500px;
+    display: block;
+    font-family: Anydore;
+    font-size: 19px;
+    color: white;
+}
+
+#content .bottom .right {
+    float: right;
+    background-color: #12264b8f;
+    width: 35%;
+    height: auto;
+}
+
+#content .bottom .right a {
+    text-decoration: none;
+    color: white;
+}
+
+#content .bottom .right a:hover {
+    color: #2d539c;
+}
+
+#content .bottom .left {
+    float: left;
+    background-color: transparent;
+    width: 60%;
+    height: auto;
+    min-height: 350px;
+}
+
+#content .new {
+    margin: auto;
+    width: 33%;
+    top: 0;
+    height: auto;
+    color: #ffffff;
+    background-image: linear-gradient(rgba(1, 0, 43, 0.5), rgba(1, 0, 43, 0.5), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.6), rgba(1, 0, 43, 0.5), rgba(1, 0, 43, 0.5));
+    opacity: 0.4;
+    display: inline-table;
+}
+
+#content .new:hover {
+    opacity: 1;
+}
+
+#content .new .title {
+    display: block;
+    font-family: Herball;
+    font-size: 30px;
+    height: auto;
+    min-height: 100px;
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+#content .new .footer {
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    vertical-align: bottom;
+}
+
+#content .new .footer .right {
+    float: right;
+    text-align: right;
+    width: 50%;
+    vertical-align: bottom;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: WaltDisney;
+}
+
+#content .new .footer .left {
+    float: left;
+    text-align: left;
+    vertical-align: bottom;
+    width: 50%;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: WaltDisney;
+}
+
+#content .contract {
+    font-size: 25px;
+    word-wrap: break-word;
+}
+
+#content .news .title {
+    width: 100%;
+    margin: auto;
+    font-size: 50px;
+    font-family: WaltDisney;
+    text-align: center;
+}
+
+#content .news .content {
+    width: 100%;
+    font-size: 25px;
+    margin: auto;
+    min-height: 390px;
+    font-family: Anydore;
+    text-align: left;
+}
+
+#content .news .footer {
+    width: 100%;
+    font-size: 35px;
+    bottom: 0;
+    margin: auto;
+    vertical-align: bottom;
+}
+
+#content .news .footer .left {
+    float: left;
+    width: 45%;
+}
+
+#content .news .footer .right {
+    float: right;
+    width: 45%;
+}

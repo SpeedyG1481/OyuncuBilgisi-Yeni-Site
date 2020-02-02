@@ -9,6 +9,7 @@
     </div>
     OyuncuBilgisi.com &copy; <?php echo date("Y"); ?>
 </div>
+<script src="./js/slider.js"></script>
 </body>
 
 </html>

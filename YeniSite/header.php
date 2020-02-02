@@ -4,20 +4,21 @@
     </div>
 
     <div class="navbar">
-        <?php if (isset($_SESSION['k_adi'])) { ?>
+        <?php if (isset($_SESSION['username'])) { ?>
 
             <a href="index.php">Anasayfa</a>
+            <a href="market.php">Market & Ürünler</a>
+            <a href="hakkimizda.php">Hakkımızda</a>
+            <a href="destek.php">Destek & İletişim</a>
+
+        <?php } else { ?>
+            <a href="index.php">Anasayfa</a>
+            <a href="register.php">Kayıt Ol</a>
+            <a href="market.php">Market & Ürünler</a>
+            <a href="hakkimizda.php">Hakkımızda</a>
+            <a href="destek.php">Destek & İletişim</a>
 
 
-            <?php } else { ?>
-                <a href="index.php">Anasayfa</a>
-                <a href="login.php">Giriş Yap</a>
-                <a href="register.php">Kayıt Ol</a>
-                <a href="market.php">Market & Ürünler</a>
-                <a href="hakkimizda.php">Hakkımızda</a>
-                <a href="destek.php">Destek & İletişim</a>
-
-
-            <?php } ?>
+        <?php } ?>
     </div>
 </header>

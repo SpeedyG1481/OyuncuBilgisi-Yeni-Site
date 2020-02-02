@@ -173,148 +173,38 @@ body {
     width: 55%;
 }
 
-#content {
-    padding: 10px;
-    width: 65%;
-    margin: auto;
+.button {
+    background-color: rgb(5, 97, 202);
+    border: none;
+    color: white;
+    padding: 15px 32px;
     text-align: center;
-    display: block;
-    min-height: 600px;
-    background-color: #12264b;
-}
-
-#content .new {
-    margin: auto;
-    width: 24%;
-    height: 300px;
-    color: #2d539c;
-    background-size: cover;
-    opacity: 0.7;
-    display: inline-table;
-}
-
-#content .new:hover {
-    opacity: 1;
-}
-
-#content .new .title {
-    display: block;
-    font-family: Herball;
-    font-size: 30px;
-    height: auto;
-    color: indigo;
-    min-height: 30px;
-    width: 100%;
-}
-
-#content .new .content {
-    display: block;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-family: Anydore;
-    font-size: 20px;
-    height: 250px;
-    width: 100%;
-    overflow: hidden;
-}
-
-#content .new .footer {
-    display: block;
-    opacity: 0.0001;
-    bottom: 0;
-    height: auto;
-    min-height: 10px;
-    width: 100%;
-}
-
-#content .new .footer:hover {
-    opacity: 1;
-}
-
-#content .new .footer .right {
-    float: right;
-    text-align: right;
-    width: 50%;
-    color: indigo;
-    font-weight: bold;
-    font-size: 20px;
-    font-family: WaltDisney;
-}
-
-#content .new .footer .left {
-    float: left;
-    text-align: left;
-    width: 50%;
-    color: indigo;
-    font-weight: bold;
-    font-size: 20px;
-    font-family: WaltDisney;
-}
-
-.navbar {
-    margin: auto;
-    text-align: center;
-    width: 70%;
-    position: sticky;
-    height: auto;
-    background-color: #12264b;
-    font-family: Anydore;
-    border-radius: 15px;
-}
-
-.navbar a {
-    width: 14%;
-    text-align: center;
-    margin: auto;
-    padding: 1%;
-    font-size: 25px;
+    font-size: 17px;
     text-decoration: none;
-    color: whitesmoke;
     display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
-.navbar a:hover {
-    color: #2d539c;
+.button:hover {
+    background-color: rgb(0, 56, 121);
 }
 
-#footerbar {
-    background-color: #12264b;
+.tb {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.leftSlider {
+    padding: 27px;
+    display: none;
     width: 100%;
     height: auto;
-    font-size: 20px;
-    padding: 10px;
-    font-family: Anydore;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: whitesmoke;
-}
-
-#footerbar .left {
-    text-align: left;
-    float: left;
-}
-
-#footerbar .right {
-    text-align: right;
-    float: right;
-}
-
-#footerbar .left a {
-    color: whitesmoke;
-    text-decoration: none;
-}
-
-#footerbar .right a {
-    color: whitesmoke;
-    text-decoration: none;
-}
-
-#footerbar .right a:hover {
-    color: #2d539c;
-}
-
-#footerbar .left a:hover {
-    color: #2d539c;
+    max-height: 450px;
 }
