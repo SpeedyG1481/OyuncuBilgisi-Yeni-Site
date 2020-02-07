@@ -24,11 +24,14 @@ $hata = $_GET['hata_id'];
         } else if ($hata == "kullaniciBulunamadi") {
             echo "<p style='font-size: 35px;'>Girdiğiniz bilgileri tekrar kontrol ediniz! Böyle bir kullanıcı bulunamadı...</p>
             <p style='font-size: 30px;'> Anasayfaya yönlendiriliyorsunuz...</p>";
+        } else if ($hata == "odemeBasarisiz") {
+            echo "<p style='font-size: 35px;'>Ödeme başarısız oldu! Lütfen tekrar deneyin...</p>
+            <p style='font-size: 30px;'> Anasayfaya yönlendiriliyorsunuz...</p>";
         } else {
             echo "<p style='font-size: 35px;'> Bilinmeyen bir hata oluştu...</p>
             <p style='font-size: 30px;'> Anasayfaya yönlendiriliyorsunuz...</p>";
         }
-        header('refresh: 3; url=index.php');
+        header('refresh: 7; url=index.php');
         ?>
     </div>
     <br><br><br>

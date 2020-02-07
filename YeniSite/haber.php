@@ -14,8 +14,12 @@ $data = $query->fetchAll(PDO::FETCH_ASSOC)[0];
 
 $haber_basligi = $data['title'];
 $icerik = $data['content'];
-$yazar = $data['username'];
+$yazar_kadi = $data['username'];
 $tarih = $data['date'];
+$yazar_adi =  $data['name_surname'];
+$hit = $data['read_times'];
+$hit++;
+$sonuc = $db->exec("UPDATE news SET read_times = '$hit' WHERE news_id = '$haber_id'");
 
 ?>
 &nbsp;
@@ -28,10 +32,12 @@ $tarih = $data['date'];
             <div class="content"><?php echo $icerik; ?></div>
             <br>
             <div class="footer">
-                <div class="left">Haber Yazarı: <?php echo $yazar; ?></div>
-                <div class="right">Haber Tarihi: <?php echo $tarih; ?></div>
+
+                <div class="left">Yazar: <?php echo $yazar_adi; ?>(<?php echo $yazar_kadi; ?>)&nbsp;</div>
+                <div class="right">&nbsp;Tarih: <?php echo $tarih; ?></div>
+                <span style="font-size:25px;">Okunma Sayısı: <?php echo $hit; ?></span>
             </div>
-            
+    
         </div>
     </div>
     <br><br><br>

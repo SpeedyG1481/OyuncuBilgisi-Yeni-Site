@@ -1,6 +1,21 @@
 <?php
 include("head.php");
 include("header.php");
+
+function get_gravatar($email, $s = 80, $d = 'mp', $r = 'g', $img = false, $atts = array())
+{
+    $url = 'https://www.gravatar.com/avatar/';
+    $url .= md5(strtolower(trim($email)));
+    $url .= "?s=$s&d=$d&r=$r";
+    if ($img) {
+        $url = '<img src="' . $url . '"';
+        foreach ($atts as $key => $val)
+            $url .= ' ' . $key . '="' . $val . '"';
+        $url .= ' />';
+    }
+    return $url;
+}
+
 ?>
 &nbsp;
 
@@ -22,16 +37,19 @@ include("header.php");
                     $gender = intval($data['gender']);
                     $tel_no = $data['telephone'];
                     $ad_soyad = $data['name_surname'];
+                    $avatar = get_gravatar($mail);
+                    $born_date = $data['born_date'];
                     $cinsiyet = (($gender == 0 ? "Belirsiz" : ($gender == 1 ? "Bay" : "Bayan")));
                     echo "
                     <br>
-                    <img style='text-align: center;' src='https://minotar.net/avatar/$name/100.png'/>
-                    <p style='font-size: 23px;'>Adınız Soyadınız;  $ad_soyad</p>
-                    <p style='font-size: 23px;'>Telefon Numaranız;  $tel_no</p>
+                    <img style='text-align: center;' src='$avatar'/>
+                    <p style='font-size: 23px;'>Ad-Soyad;  $ad_soyad</p>
+                    <p style='font-size: 23px;'>Telefon;  $tel_no</p>
                     <p style='font-size: 23px;'>Bakiyeniz;  $bakiye ₺</p>
-                    <p style='font-size: 23px;'>E-Mail Adresiniz;  $mail</p>
-                    <p style='font-size: 23px;'>Kayıt Tarihiniz;  $date</p>
-                    <p style='font-size: 23px;'>Cinsiyetiniz;  $cinsiyet</p>"; ?>
+                    <p style='font-size: 23px;'>E-Mail;  $mail</p>
+                    <p style='font-size: 23px;'>Doğum Tarihi;  $born_date</p>
+                    <p style='font-size: 23px;'>Cinsiyetiniz;  $cinsiyet</p>
+                    <p style='font-size: 23px;'>Kayıt Tarihi;  $date</p>"; ?>
 
                     <br>
                     <button class="button" value="Çıkış Yap" onclick="window.location.href = 'logout.php'">Çıkış Yap</button>
@@ -54,37 +72,20 @@ include("header.php");
             </div>
 
             <div class="left">
-                <img class="leftSlider" src="./images/slider_1.png" style="width:100%">
-                <img class="leftSlider" src="./images/slider_2.jpg" style="width:100%">
-                <img class="leftSlider" src="./images/slider_3.jpg" style="width:100%">
+                <?php
+                $veri = $db->prepare("SELECT * FROM slider");
+                $veri->execute();
+                $reader = 0;
+                foreach ($veri as $yaz) {
+                    echo "<a href='$yaz[url]'><img class='leftSlider' src='$yaz[src]' style='width:100%'></a>";
+                }
+                ?>
+
             </div>
         </div>
-        <?php
-        if (isset($_SESSION['username']))
-            echo "<br><br><br><br><br><br><br><br><br><br>";
-
-        $veri = $db->prepare("SELECT * FROM news, users, user_news WHERE (user_news . user_id = users . user_id) AND (user_news . news_id = news . news_id)");
-        $veri->execute();
-        $reader = 0;
-        foreach ($veri as $yaz) {
-            echo "
-            <a href='haber.php?haber_id=$yaz[news_id]'><div class='new'>
-            <div class='title'>$yaz[title]</div>
-            <div class='footer'>
-                <div class='right'>$yaz[date]&nbsp;&nbsp;</div>
-                <div class='left'>&nbsp;&nbsp;$yaz[username]</div>
-            </div>
-        </div></a>";
-
-            if ($reader != 0 && $reader % 3 == 0)
-                echo "<br><br>";
-            if ($reader == 9)
-                break;
-            $reader++;
-        }
-        ?>
     </div>
-    <br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+
     <?php
     include("footer.php");
     ?>

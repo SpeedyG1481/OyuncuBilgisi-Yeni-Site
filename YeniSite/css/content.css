@@ -3,7 +3,6 @@
     width: 75%;
     color: white;
     margin: auto;
-    font-family: Anydore;
     text-align: center;
     display: block;
     min-height: 600px;
@@ -33,7 +32,6 @@
     height: auto;
     min-height: 500px;
     display: block;
-    font-family: Anydore;
     font-size: 19px;
     color: white;
 }
@@ -43,6 +41,7 @@
     background-color: #12264b8f;
     width: 35%;
     height: auto;
+    min-height: 350px;
 }
 
 #content .bottom .right a {
@@ -62,58 +61,6 @@
     min-height: 350px;
 }
 
-#content .new {
-    margin: auto;
-    width: 33%;
-    top: 0;
-    height: auto;
-    color: #ffffff;
-    background-image: linear-gradient(rgba(1, 0, 43, 0.5), rgba(1, 0, 43, 0.5), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.6), rgba(1, 0, 43, 0.5), rgba(1, 0, 43, 0.5));
-    opacity: 0.4;
-    display: inline-table;
-}
-
-#content .new:hover {
-    opacity: 1;
-}
-
-#content .new .title {
-    display: block;
-    font-family: Herball;
-    font-size: 30px;
-    height: auto;
-    min-height: 100px;
-    color: rgb(255, 255, 255);
-    width: 100%;
-}
-
-#content .new .footer {
-    bottom: 0;
-    height: auto;
-    width: 100%;
-    vertical-align: bottom;
-}
-
-#content .new .footer .right {
-    float: right;
-    text-align: right;
-    width: 50%;
-    vertical-align: bottom;
-    font-weight: bold;
-    font-size: 17px;
-    font-family: WaltDisney;
-}
-
-#content .new .footer .left {
-    float: left;
-    text-align: left;
-    vertical-align: bottom;
-    width: 50%;
-    font-weight: bold;
-    font-size: 17px;
-    font-family: WaltDisney;
-}
-
 #content .contract {
     font-size: 25px;
     word-wrap: break-word;
@@ -123,7 +70,6 @@
     width: 100%;
     margin: auto;
     font-size: 50px;
-    font-family: WaltDisney;
     text-align: center;
 }
 
@@ -132,7 +78,6 @@
     font-size: 25px;
     margin: auto;
     min-height: 390px;
-    font-family: Anydore;
     text-align: left;
 }
 
@@ -152,4 +97,59 @@
 #content .news .footer .right {
     float: right;
     width: 45%;
+}
+
+
+/*
+Çoğul haberler sayfası blok düzenlemesi.
+*/
+
+#content .new {
+    display: inline-block;
+    border-spacing: 15px;
+    text-decoration: none;
+    width: 40%;
+    color: white;
+    height: 250px;
+    background-color: #0c1c3ac7;
+}
+
+#content .new .title {
+    font-size: 40px;
+    top: 0;
+    height: 25%;
+}
+
+#content .new .title .left {
+    font-size: 40px;
+    top: 0;
+    height: 25%;
+}
+
+#content .new .content {
+    height: 60%;
+    font-size: 20px;
+}
+
+#content .new .content a {
+    text-decoration: none;
+    color: rgb(0, 101, 196);
+}
+
+#content .new .content a:hover {
+    color: rgb(0, 110, 255);
+}
+
+#content .new .new-bottom {
+    bottom: 0;
+    font-size: 22px;
+    height: 15%;
+}
+
+#content .new .new-bottom .left {
+    float: left;
+}
+
+#content .new .new-bottom .right {
+    float: right;
 }
