@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 03 Şub 2020, 08:20:32
+-- Üretim Zamanı: 11 Şub 2020, 12:30:10
 -- Sunucu sürümü: 10.4.11-MariaDB
 -- PHP Sürümü: 7.4.1
 
@@ -68,17 +68,21 @@ CREATE TABLE `news` (
   `news_id` int(11) NOT NULL,
   `title` text COLLATE utf8mb4_turkish_ci NOT NULL,
   `content` text COLLATE utf8mb4_turkish_ci NOT NULL,
-  `date` date NOT NULL
+  `read_times` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `show_main_page` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
 
 --
 -- Tablo döküm verisi `news`
 --
 
-INSERT INTO `news` (`news_id`, `title`, `content`, `date`) VALUES
-(1, 'Sitemiz Açıldı', 'Sitemiz açıldı. Sitemizi kullanmak çok basit! Tek yapmanız gereken kayıt olmak ve tüm ayrıcalıklardan faydalanmak. Lütfen kayıt olurken bilgilerinizi eksiksiz ve doğru bir biçimde giriniz. Sorun oluşması durumunda yardımcı olabilmemiz için destek sistemini kullanınız. Ayrıca Discord adreslerimiz üzerinden de destek alabilirsiniz.\r\n\r\n\r\nMegalow Teknoloji.', '2020-01-28'),
-(3, 'BasicTeamWars Yayında!', 'Sevgili OyuncuBilgisi takipçileri,\r\nçok beklediğiniz harika özelliklere sahip takım savaşları eklentisi yayında!\r\n\r\nBETA sürümünde eklentiden faydalanmak için market üzerinde satın alabilirsiniz.', '2020-01-29'),
-(4, 'asdsad', 'asdsadasd', '2020-01-28');
+INSERT INTO `news` (`news_id`, `title`, `content`, `read_times`, `date`, `show_main_page`) VALUES
+(1, 'Sitemiz Açıldı', 'Sitemiz açıldı. Sitemizi kullanmak çok basit! Tek yapmanız gereken kayıt olmak ve tüm ayrıcalıklardan faydalanmak. Lütfen kayıt olurken bilgilerinizi eksiksiz ve doğru bir biçimde giriniz. Sorun oluşması durumunda yardımcı olabilmemiz için destek sistemini kullanınız. Ayrıca Discord adreslerimiz üzerinden de destek alabilirsiniz.\r\n\r\n\r\nMegalow Teknoloji.', 94, '2020-01-28', 1),
+(3, 'BasicTeamWars Yayında!', 'Sevgili OyuncuBilgisi takipçileri,\r\nçok beklediğiniz harika özelliklere sahip takım savaşları eklentisi yayında!\r\n\r\nBETA sürümünde eklentiden faydalanmak için market üzerinde satın alabilirsiniz.', 10, '2020-01-29', 1),
+(4, 'asdsad', 'asdsadasd', 1, '2020-01-28', 0),
+(5, 'asdasdsa', 'asdasdsad', 0, '2020-02-02', 0),
+(6, 'Deneme', 'Deneme', 0, '2020-02-03', 0);
 
 -- --------------------------------------------------------
 
@@ -90,9 +94,42 @@ CREATE TABLE `products` (
   `product_id` int(11) NOT NULL,
   `name` text COLLATE utf8mb4_turkish_ci NOT NULL,
   `price` int(11) NOT NULL,
+  `img` text COLLATE utf8mb4_turkish_ci NOT NULL,
   `description` text COLLATE utf8mb4_turkish_ci NOT NULL,
   `sale` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+
+--
+-- Tablo döküm verisi `products`
+--
+
+INSERT INTO `products` (`product_id`, `name`, `price`, `img`, `description`, `sale`) VALUES
+(1, 'BasicTeamWars', 85, 'https://cdnuploads.aa.com.tr/uploads/sirkethaberleri/Contents/2019/05/31/thumbs_b_c_29a894f81d09b573d4e06e410d8fe29c.jpg', 'Merhabalar, bu günkü eklentimizde size çok şey tanıtacağız.', 0),
+(2, 'Deneme', 100, 'https://cdnuploads.aa.com.tr/uploads/sirkethaberleri/Contents/2019/05/31/thumbs_b_c_29a894f81d09b573d4e06e410d8fe29c.jpg', 'Yok artık!', 85),
+(3, 'asdsad', 15, 'https://www.edirne.bel.tr/images/IMG_7891.JPG', 'asdasdasd', 0),
+(4, 'gegasdsad', 15, 'https://ferminpeluqueros.com/wp-content/uploads/2019/08/avefenix.gif', 'asdasdasd', 5),
+(5, 'asdasdasdsad', 15, 'https://cdnuploads.aa.com.tr/uploads/sirkethaberleri/Contents/2019/04/02/thumbs_b_c_4f658af5cb06d7682dc5c73d7cc4fcd4.jpg', 'asdasdasdasd', 75);
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `slider`
+--
+
+CREATE TABLE `slider` (
+  `slider_id` int(11) NOT NULL,
+  `url` text COLLATE utf8mb4_turkish_ci NOT NULL,
+  `src` text COLLATE utf8mb4_turkish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+
+--
+-- Tablo döküm verisi `slider`
+--
+
+INSERT INTO `slider` (`slider_id`, `url`, `src`) VALUES
+(1, 'https://www.mcoyuncubilgisi.com', './images/slider_1.png'),
+(2, 'https://www.mcoyuncubilgisi.com', './images/slider_2.jpg'),
+(3, 'https://www.mcoyuncubilgisi.com', './images/slider_3.jpg');
 
 -- --------------------------------------------------------
 
@@ -155,7 +192,10 @@ CREATE TABLE `user_news` (
 
 INSERT INTO `user_news` (`news_id`, `user_id`) VALUES
 (1, 1),
-(3, 1);
+(3, 1),
+(4, 1),
+(5, 1),
+(6, 1);
 
 -- --------------------------------------------------------
 
@@ -200,6 +240,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`product_id`);
 
 --
+-- Tablo için indeksler `slider`
+--
+ALTER TABLE `slider`
+  ADD PRIMARY KEY (`slider_id`);
+
+--
 -- Tablo için indeksler `tickets`
 --
 ALTER TABLE `tickets`
@@ -240,13 +286,19 @@ ALTER TABLE `contract`
 -- Tablo için AUTO_INCREMENT değeri `news`
 --
 ALTER TABLE `news`
-  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `slider`
+--
+ALTER TABLE `slider`
+  MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `tickets`
